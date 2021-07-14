@@ -1,4 +1,4 @@
- node{
+node{
    stage('SCM Checkout'){
      git 'https://github.com/kanchana1520/my-app.git'
    }
@@ -24,9 +24,9 @@
    sh 'docker push kanchanaravi1520/myweb:0.0.2'
    }
 stage('Nexus Image Push'){
-   sh "docker login -u admin -p admin123 18.216.130.92:8083"
-   sh "docker tag kanchanaravi1520/myweb:0.0.2 18.216.130.92:8083/ravi:1.0.0"
-   sh 'docker push 18.216.130.92:8083/ravi:1.0.0'
+   sh "docker login -u admin -p admin123 13.59.146.184:8083"
+   sh "docker tag kanchanaravi1520/myweb:0.0.2 13.59.146.184:8083/ravi:1.0.0"
+   sh 'docker push 13.59.146.184:8083/ravi:1.0.0'
    }
    stage('Remove Previous Container'){
 	try{
